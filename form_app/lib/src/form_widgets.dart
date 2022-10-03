@@ -18,7 +18,7 @@ class _FormWidgetsDemoState extends State<FormWidgetsDemo> {
   String description = '';
   DateTime date = DateTime.now();
   double maxValue = 0;
-  bool? brushedTeeth = false;
+  bool? reviewNeeded = false;
   bool enableFeature = false;
 
   @override
@@ -82,7 +82,7 @@ class _FormWidgetsDemoState extends State<FormWidgetsDemo> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Estimated value',
+                                  'Pay:',
                                   style: Theme.of(context).textTheme.bodyLarge,
                                 ),
                               ],
@@ -111,14 +111,14 @@ class _FormWidgetsDemoState extends State<FormWidgetsDemo> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Checkbox(
-                              value: brushedTeeth,
+                              value: reviewNeeded,
                               onChanged: (checked) {
                                 setState(() {
-                                  brushedTeeth = checked;
+                                  reviewNeeded = checked;
                                 });
                               },
                             ),
-                            Text('Brushed Teeth',
+                            Text('Review needed?',
                                 style: Theme.of(context).textTheme.titleMedium),
                           ],
                         ),
@@ -126,7 +126,7 @@ class _FormWidgetsDemoState extends State<FormWidgetsDemo> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Text('Enable feature',
+                            Text('Send to employee',
                                 style: Theme.of(context).textTheme.bodyLarge),
                             Switch(
                               value: enableFeature,

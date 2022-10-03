@@ -40,7 +40,7 @@ void setupWindow() {
 
 final demos = [
   Demo(
-    name: 'Sign in with HTTP',
+    name: 'HTTP Sign in',
     route: '/signin_http',
     builder: (context) => SignInHttpDemo(
       // This sample uses a mock HTTP client.
@@ -53,7 +53,7 @@ final demos = [
     builder: (context) => const AutofillDemo(),
   ),
   Demo(
-    name: 'Form widgets',
+    name: 'Clock out Employee',
     route: '/form_widgets',
     builder: (context) => const FormWidgetsDemo(),
   ),
@@ -71,7 +71,7 @@ class FormApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Form Samples',
-      theme: ThemeData(primarySwatch: Colors.teal),
+      theme: ThemeData(primarySwatch: Colors.red),
       routes: Map.fromEntries(demos.map((d) => MapEntry(d.route, d.builder))),
       home: const HomePage(),
     );
